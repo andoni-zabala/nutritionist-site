@@ -1,0 +1,342 @@
+---
+---
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div class="section-tag">Contact</div>
+      <h2 class="contact-heading">
+        Let's start your<br /><em>transformation</em>
+      </h2>
+      <p class="contact-sub">
+        Book a free 30-minute discovery call. No pressure, no commitment —
+        just an honest conversation about your goals and how I can help.
+      </p>
+
+      <div class="contact-details">
+        <div class="detail">
+          <span class="detail-icon">✉</span>
+          <div>
+            <span class="detail-label">Email</span>
+            <a href="mailto:hola@sofianutritionist.com" class="detail-val">
+              hola@sofianutritionist.com
+            </a>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="detail-icon">📍</span>
+          <div>
+            <span class="detail-label">Location</span>
+            <span class="detail-val">Barcelona, Spain — also available online</span>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="detail-icon">🕐</span>
+          <div>
+            <span class="detail-label">Hours</span>
+            <span class="detail-val">Mon–Fri, 9:00–18:00 CET</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal reveal-delay-2">
+      <form class="contact-form" name="contact" netlify>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">Main goal</label>
+          <select id="goal" name="goal" required>
+            <option value="" disabled selected>Select your primary goal…</option>
+            <option value="weight">Weight management</option>
+            <option value="gut">Gut health</option>
+            <option value="hormones">Hormonal balance</option>
+            <option value="energy">More energy & vitality</option>
+            <option value="sports">Sports performance</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell me a little about yourself</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="What's been going on? What have you tried before? Any context is helpful…"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group form-group--check">
+          <label class="checkbox-label">
+            <input type="checkbox" name="newsletter" />
+            <span>Subscribe to my monthly nutrition newsletter</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary form-submit">
+          Send message
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 8rem 2.5rem;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  /* Info column */
+  .contact-heading {
+    font-size: clamp(2.4rem, 3.5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--color-forest);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-heading em {
+    font-style: italic;
+    color: var(--color-terra);
+  }
+
+  .contact-sub {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+
+  .detail-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .detail-label {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .detail-val {
+    font-size: 0.88rem;
+    color: var(--color-ink);
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  a.detail-val:hover {
+    color: var(--color-forest);
+    text-decoration: underline;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-forest);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    border: 1.5px solid var(--color-cream-dark);
+    transition: all 0.2s ease;
+  }
+
+  .social-link:hover {
+    background: var(--color-forest);
+    color: var(--color-cream);
+    border-color: var(--color-forest);
+  }
+
+  /* Form */
+  .contact-form-wrap {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1.5px solid var(--color-cream-dark);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    background: var(--color-cream);
+    border: 1.5px solid var(--color-cream-dark);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    appearance: none;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--color-sage);
+    box-shadow: 0 0 0 3px rgba(122, 158, 104, 0.12);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #bbb;
+  }
+
+  .form-group--check {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: #666;
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .checkbox-label input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-forest);
+    cursor: pointer;
+  }
+
+  .form-submit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact {
+      padding: 5rem 1.5rem;
+    }
+
+    .contact-form-wrap {
+      padding: 1.75rem;
+    }
+  }
+</style>

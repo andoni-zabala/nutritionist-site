@@ -1,0 +1,274 @@
+---
+const services = [
+  {
+    number: '01',
+    title: 'One-on-One Coaching',
+    tagline: 'Your personal nutrition roadmap',
+    description:
+      'Weekly sessions designed around your biology, goals, and lifestyle. Includes initial assessment, lab review, and ongoing adjustments as you progress.',
+    features: ['Initial 90-min deep dive', 'Weekly 50-min sessions', 'Lab & biomarker review', 'Unlimited messaging support'],
+    price: 'From €120 / session',
+    featured: true,
+    icon: '◎',
+  },
+  {
+    number: '02',
+    title: 'Custom Meal Planning',
+    tagline: 'Eat well without the guesswork',
+    description:
+      'A fully personalised 4-week meal plan based on your preferences, intolerances, schedule, and nutritional needs — with shopping lists included.',
+    features: ['4-week rotating plan', 'Recipes & prep guides', 'Grocery lists', 'One revision round'],
+    price: 'From €180 / plan',
+    featured: false,
+    icon: '◈',
+  },
+  {
+    number: '03',
+    title: 'Group Wellness Program',
+    tagline: '6 weeks of guided transformation',
+    description:
+      'Join a small cohort for an immersive group program covering nutrition fundamentals, mindful eating, and sustainable habit formation.',
+    features: ['6 weekly live sessions', 'Private community access', 'Workbooks & resources', 'Q&A every session'],
+    price: 'From €350 / program',
+    featured: false,
+    icon: '◇',
+  },
+];
+---
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="section-tag reveal">Services</div>
+      <h2 class="services-heading reveal reveal-delay-1">
+        Ways I can<br /><em>work with you</em>
+      </h2>
+      <p class="services-sub reveal reveal-delay-2">
+        Every offering is built around real, sustainable change —
+        not quick fixes or one-size-fits-all protocols.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      {services.map((s, i) => (
+        <div class={`service-card ${s.featured ? 'service-card--featured' : ''} reveal reveal-delay-${i + 2}`}>
+          <div class="card-top">
+            <div class="card-number">{s.number}</div>
+            <div class="card-icon">{s.icon}</div>
+          </div>
+          <h3 class="card-title">{s.title}</h3>
+          <p class="card-tagline">{s.tagline}</p>
+          <p class="card-desc">{s.description}</p>
+          <ul class="card-features">
+            {s.features.map((f) => (
+              <li>
+                <span class="feat-check" aria-hidden="true">✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <div class="card-footer">
+            <span class="card-price">{s.price}</span>
+            <a href="#contact" class={s.featured ? 'btn-primary' : 'btn-outline'}>
+              Get started
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 8rem 2.5rem;
+    background: var(--color-cream);
+  }
+
+  .services-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+
+  .services-heading {
+    font-size: clamp(2.4rem, 3.5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--color-forest);
+    margin-bottom: 1.25rem;
+  }
+
+  .services-heading em {
+    font-style: italic;
+    color: var(--color-terra);
+  }
+
+  .services-sub {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #666;
+    font-weight: 300;
+  }
+
+  /* Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.25rem;
+    border: 1.5px solid var(--color-cream-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  }
+
+  .service-card--featured {
+    background: var(--color-forest);
+    border-color: var(--color-forest);
+    color: var(--color-cream);
+  }
+
+  .service-card--featured .card-number,
+  .service-card--featured .card-title,
+  .service-card--featured .card-tagline,
+  .service-card--featured .card-desc {
+    color: var(--color-cream);
+  }
+
+  .service-card--featured .card-price {
+    color: var(--color-sage-light);
+  }
+
+  .service-card--featured .feat-check {
+    color: var(--color-sage-light);
+  }
+
+  .service-card--featured .card-features li {
+    color: rgba(250, 247, 240, 0.8);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-number {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-sage);
+  }
+
+  .service-card--featured .card-number {
+    color: var(--color-sage-light);
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    opacity: 0.7;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-forest);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .card-tagline {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+
+  .card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+
+  .card-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: #555;
+    font-weight: 400;
+  }
+
+  .feat-check {
+    color: var(--color-sage);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .service-card--featured .card-footer {
+    border-top-color: rgba(255,255,255,0.12);
+  }
+
+  .card-price {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-forest);
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 520px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .services {
+      padding: 5rem 1.5rem;
+    }
+  }
+</style>

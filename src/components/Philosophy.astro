@@ -1,0 +1,200 @@
+---
+const principles = [
+  {
+    title: 'Bio-individuality',
+    body: 'No single diet works for every body. We start by understanding your unique biochemistry, history, and lifestyle.',
+  },
+  {
+    title: 'Root causes first',
+    body: 'Symptoms are signals. Instead of managing them, we investigate the underlying drivers — gut health, hormones, inflammation.',
+  },
+  {
+    title: 'Food as information',
+    body: 'Every meal sends signals to your cells. The goal is not perfection but understanding what works for you.',
+  },
+  {
+    title: 'Sustainable over optimal',
+    body: 'The best diet is the one you can actually maintain. We build habits that fit your real life, not a fantasy version of it.',
+  },
+];
+---
+
+<section class="philosophy" id="approach">
+  <div class="philosophy-inner">
+    <div class="philosophy-quote-col reveal">
+      <div class="section-tag section-tag--light">My approach</div>
+
+      <blockquote class="big-quote reveal reveal-delay-1">
+        "Health is not a destination. It's the ongoing practice of listening to
+        your body and making choices that <em>honour it.</em>"
+      </blockquote>
+
+      <p class="philosophy-body reveal reveal-delay-2">
+        My practice is guided by functional nutrition — a systems-based approach
+        that treats the body as an interconnected whole, not a collection of
+        isolated symptoms. I draw on the latest research alongside traditional
+        dietary wisdom to build programmes that are both effective and liveable.
+      </p>
+
+      <a href="#contact" class="btn-primary btn-primary--light reveal reveal-delay-3">
+        Book a free discovery call
+      </a>
+    </div>
+
+    <div class="principles-col">
+      {principles.map((p, i) => (
+        <div class={`principle reveal reveal-delay-${i + 1}`}>
+          <div class="principle-num">0{i + 1}</div>
+          <div class="principle-content">
+            <h3 class="principle-title">{p.title}</h3>
+            <p class="principle-body">{p.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .philosophy {
+    background: var(--color-forest);
+    padding: 8rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative blobs */
+  .philosophy::before,
+  .philosophy::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .philosophy::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(122, 158, 104, 0.15) 0%, transparent 70%);
+    top: -200px;
+    right: -150px;
+  }
+
+  .philosophy::after {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200, 96, 58, 0.1) 0%, transparent 70%);
+    bottom: -100px;
+    left: 10%;
+  }
+
+  .philosophy-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Quote column */
+  .section-tag--light {
+    color: var(--color-sage-light) !important;
+  }
+
+  .section-tag--light::before {
+    background: var(--color-sage-light) !important;
+  }
+
+  .big-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+    line-height: 1.35;
+    color: var(--color-cream);
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2rem;
+    border: none;
+    padding: 0;
+  }
+
+  .big-quote em {
+    font-style: italic;
+    color: var(--color-sage-light);
+  }
+
+  .philosophy-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(250, 247, 240, 0.65);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .btn-primary--light {
+    background: var(--color-cream) !important;
+    color: var(--color-forest) !important;
+  }
+
+  .btn-primary--light:hover {
+    background: var(--color-cream-dark) !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Principles column */
+  .principles-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .principle {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid rgba(250, 247, 240, 0.1);
+  }
+
+  .principle:last-child {
+    border-bottom: none;
+  }
+
+  .principle-num {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: rgba(250, 247, 240, 0.2);
+    font-weight: 500;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+    width: 2rem;
+  }
+
+  .principle-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .principle-body {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(250, 247, 240, 0.6);
+    font-weight: 300;
+  }
+
+  @media (max-width: 1024px) {
+    .philosophy-inner {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .philosophy {
+      padding: 5rem 1.5rem;
+    }
+  }
+</style>

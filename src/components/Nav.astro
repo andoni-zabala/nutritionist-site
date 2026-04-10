@@ -1,0 +1,240 @@
+---
+---
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="logo-name">Sofía Martínez</span>
+      <span class="logo-sub">Registered Nutritionist</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#approach" class="mobile-link">Approach</a></li>
+      <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+      <li><a href="#contact" class="mobile-link mobile-link--cta">Book a Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .nav.scrolled {
+    background: rgba(250, 247, 240, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+  }
+
+  .nav-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 1.6rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 0.3s ease;
+  }
+
+  .nav.scrolled .nav-inner {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    color: var(--color-forest);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .logo-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .logo-sub {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    font-weight: 400;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--color-ink);
+    font-size: 0.78rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    opacity: 0.75;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-forest);
+    opacity: 1;
+  }
+
+  .nav-cta {
+    background: var(--color-forest) !important;
+    color: var(--color-cream) !important;
+    padding: 0.55rem 1.3rem !important;
+    border-radius: 100px;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--color-forest-mid) !important;
+    transform: translateY(-1px);
+  }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--color-forest);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .nav-toggle.open span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    background: var(--color-cream);
+    border-top: 1px solid var(--color-cream-dark);
+    padding: 1.5rem 2.5rem 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    max-height: 400px;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobile-link {
+    text-decoration: none;
+    color: var(--color-ink);
+    font-size: 1rem;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-link:hover {
+    color: var(--color-forest);
+  }
+
+  .mobile-link--cta {
+    color: var(--color-terra);
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav')!;
+  const toggle = document.getElementById('nav-toggle')!;
+  const mobileMenu = document.getElementById('mobile-menu')!;
+
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

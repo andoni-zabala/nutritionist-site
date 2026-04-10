@@ -1,0 +1,417 @@
+---
+---
+
+<section class="hero">
+  <!-- Background orb -->
+  <div class="hero-orb" aria-hidden="true"></div>
+  <div class="hero-orb-2" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">
+      <span class="eyebrow-dot"></span>
+      Currently accepting new clients
+    </div>
+
+    <h1 class="hero-heading reveal reveal-delay-1">
+      <em>Nourish</em> your body.<br />
+      Transform<br />your life.
+    </h1>
+
+    <p class="hero-body reveal reveal-delay-2">
+      Evidence-based nutrition coaching tailored to your unique biology,
+      lifestyle, and goals. No fad diets — just lasting, sustainable change.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+      <a href="#about" class="hero-link">
+        Learn about my approach
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero-stats reveal reveal-delay-4">
+      <div class="stat">
+        <span class="stat-n">200+</span>
+        <span class="stat-l">Clients</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">8</span>
+        <span class="stat-l">Years exp.</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-n">95%</span>
+        <span class="stat-l">Satisfaction</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal reveal-delay-2">
+    <div class="photo-frame">
+      <!-- Replace this div with an <img> tag when you have a real photo -->
+      <div class="photo-placeholder">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="ph-icon">
+          <circle cx="60" cy="42" r="22" stroke="#7A9E68" stroke-width="1.5"/>
+          <path d="M18 108 C18 82 36 70 60 70 C84 70 102 82 102 108" stroke="#7A9E68" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <p class="ph-hint">Add your photo here</p>
+      </div>
+
+      <div class="badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M7 1l1.56 3.16L12 4.76l-2.5 2.43.59 3.43L7 9l-3.09 1.62.59-3.43L2 4.76l3.44-.6L7 1z" fill="#BF8C40"/>
+        </svg>
+        Registered Nutritionist
+      </div>
+    </div>
+
+    <div class="float-card">
+      <span class="float-icon">🌿</span>
+      <div class="float-text">
+        <span class="float-label">This week</span>
+        <span class="float-val">Anti-inflammatory eating</span>
+      </div>
+    </div>
+
+    <div class="float-card float-card--bottom">
+      <span class="float-icon">✦</span>
+      <div class="float-text">
+        <span class="float-label">Available</span>
+        <span class="float-val">Online & in-person</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100svh;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 7rem 2.5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+  }
+
+  /* Ambient background shapes */
+  .hero-orb {
+    position: absolute;
+    top: -120px;
+    right: -180px;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122, 158, 104, 0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-orb-2 {
+    position: absolute;
+    bottom: 80px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200, 96, 58, 0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Content */
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+  }
+
+  .eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-sage);
+    animation: blink 2.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-heading {
+    font-size: clamp(3.2rem, 5.5vw, 6rem);
+    line-height: 1.0;
+    color: var(--color-forest);
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  .hero-heading em {
+    font-style: italic;
+    color: var(--color-terra);
+  }
+
+  .hero-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #5a5a55;
+    max-width: 460px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-forest);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: gap 0.2s ease;
+  }
+
+  .hero-link:hover {
+    gap: 0.65rem;
+  }
+
+  /* Stats */
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-n {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-forest);
+    line-height: 1;
+  }
+
+  .stat-l {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    font-weight: 400;
+  }
+
+  .stat-sep {
+    width: 1px;
+    height: 36px;
+    background: var(--color-cream-dark);
+  }
+
+  /* Visual area */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .photo-frame {
+    position: relative;
+    width: 400px;
+    height: 500px;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, var(--color-cream-dark), #d8d0c4);
+    border-radius: 200px 200px 140px 140px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .ph-icon {
+    width: 90px;
+    height: 90px;
+    opacity: 0.4;
+  }
+
+  .ph-hint {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: 400;
+  }
+
+  .badge {
+    position: absolute;
+    bottom: 28px;
+    left: -24px;
+    background: var(--color-forest);
+    color: var(--color-cream);
+    padding: 0.55rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    box-shadow: 0 4px 20px rgba(27, 58, 26, 0.3);
+  }
+
+  /* Floating cards */
+  .float-card {
+    position: absolute;
+    top: 48px;
+    right: -32px;
+    background: white;
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 195px;
+  }
+
+  .float-card--bottom {
+    top: auto;
+    bottom: 80px;
+    right: -40px;
+  }
+
+  .float-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .float-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .float-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #bbb;
+    font-weight: 500;
+  }
+
+  .float-val {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-forest);
+  }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #bbb;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #ccc);
+    animation: scrollAnim 2s ease infinite;
+  }
+
+  @keyframes scrollAnim {
+    0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+    49%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
+      padding-top: 6rem;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .photo-frame {
+      width: 300px;
+      height: 380px;
+    }
+
+    .hero-body,
+    .hero-eyebrow {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions,
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .float-card {
+      display: none;
+    }
+
+    .scroll-hint {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 5.5rem 1.5rem 3rem;
+    }
+  }
+</style>
