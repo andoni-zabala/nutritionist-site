@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'Sofía Martínez — Registered Nutritionist',
-  description = 'Evidence-based nutrition coaching tailored to your unique biology, lifestyle, and goals. No fad diets — just lasting change.',
+  title = "Mabel Gomez — Licenciada en Nutrición",
+  description = "Nutrición basada en evidencia adaptada a tu biología, estilo de vida y objetivos. Sin dietas milagro — solo cambios duraderos.",
 } = Astro.props;
 ---
 
@@ -37,14 +37,16 @@ const {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
+              entry.target.classList.add("visible");
               observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.08 }
+        { threshold: 0.08 },
       );
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
