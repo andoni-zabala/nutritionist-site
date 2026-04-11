@@ -5,14 +5,14 @@
   <div class="about-inner">
     <div class="about-image-col reveal">
       <div class="about-frame">
-        <!-- Replace with <img src="..." alt="Sofía Martínez"> -->
-        <div class="about-img-placeholder">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="36" r="18" stroke="#7A9E68" stroke-width="1.2"/>
-            <path d="M14 90C14 68 29 58 50 58C71 58 86 68 86 90" stroke="#7A9E68" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-          <span>Photo coming soon</span>
-        </div>
+        <img
+          src="/mabel-gomez.jpg"
+          alt="Mabel Gomez - Licenciada en Nutrición"
+          class="about-photo"
+          width="600"
+          height="750"
+          loading="lazy"
+        />
         <div class="about-frame-deco" aria-hidden="true"></div>
       </div>
 
@@ -20,70 +20,64 @@
         <div class="cred-item">
           <span class="cred-icon">🎓</span>
           <div>
-            <div class="cred-title">MSc Clinical Nutrition</div>
-            <div class="cred-sub">University of Barcelona, 2016</div>
+            <div class="cred-title">Licenciada en Nutrición</div>
+            <div class="cred-sub">Nutricionista profesional</div>
           </div>
         </div>
         <div class="cred-item">
-          <span class="cred-icon">🏅</span>
+          <span class="cred-icon">🦠</span>
           <div>
-            <div class="cred-title">Registered Nutritionist</div>
-            <div class="cred-sub">CODINUCAT Certified</div>
+            <div class="cred-title">Especialista en Microbiota</div>
+            <div class="cred-sub">Salud intestinal</div>
           </div>
         </div>
         <div class="cred-item">
-          <span class="cred-icon">🌱</span>
+          <span class="cred-icon">🔥</span>
           <div>
-            <div class="cred-title">Functional Medicine</div>
-            <div class="cred-sub">IFM Certified Practitioner</div>
+            <div class="cred-title">Nutrición Antiinflamatoria</div>
+            <div class="cred-sub">Salud digestiva</div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="about-text-col">
-      <div class="section-tag reveal">About me</div>
+      <div class="section-tag reveal">Sobre mí</div>
 
       <h2 class="about-heading reveal reveal-delay-1">
-        Food as medicine.<br />
-        <em>Science as guide.</em>
+        La alimentación como medicina.<br />
+        <em>La ciencia como guía.</em>
       </h2>
 
       <p class="about-p reveal reveal-delay-2">
-        I'm Sofía — a registered nutritionist with over 8 years helping people
-        rebuild their relationship with food. My practice is rooted in
-        functional nutrition and the belief that there is no universal diet:
-        <strong>your body is unique, and your nutrition plan should be too.</strong>
+        Soy Licenciada en Nutrición, capacitada para asesorar y brindar orientación en cuanto a hábitos alimentarios saludables. Mi formación me permite evaluar el estado nutricional de las personas y diseñar <strong>planes de alimentación personalizados, adaptados a las necesidades y objetivos de cada individuo.</strong>
       </p>
 
       <p class="about-p reveal reveal-delay-3">
-        I work with people dealing with hormonal imbalances, gut issues,
-        metabolic conditions, and those who simply want to feel more energised
-        and at home in their body — without the obsession and restriction that
-        most diets demand.
+        Mi objetivo como nutricionista es ayudar a las personas a mejorar su calidad de vida a través de una alimentación adecuada y equilibrada, que les permita mantener una buena salud y prevenir enfermedades relacionadas con la nutrición. Me mantengo actualizada en las últimas investigaciones y tendencias en el campo de la alimentación y la nutrición.
       </p>
 
       <div class="about-values reveal reveal-delay-4">
         <div class="value">
           <span class="value-icon">✦</span>
-          <span>Bio-individual approach</span>
+          <span>Planes personalizados</span>
         </div>
         <div class="value">
           <span class="value-icon">✦</span>
-          <span>Evidence-based methods</span>
+          <span>Salud digestiva</span>
         </div>
         <div class="value">
           <span class="value-icon">✦</span>
-          <span>No restriction culture</span>
+          <span>Microbiota intestinal</span>
         </div>
         <div class="value">
           <span class="value-icon">✦</span>
-          <span>Root cause focus</span>
+          <span>Nutrición antiinflamatoria</span>
         </div>
       </div>
 
       <a href="#contact" class="btn-primary reveal reveal-delay-5" style="margin-top: 2.5rem;">
-        Start your journey
+        Inicia tu transformación
       </a>
     </div>
   </div>
@@ -114,31 +108,13 @@
     margin-bottom: 2.5rem;
   }
 
-  .about-img-placeholder {
+  .about-photo {
     width: 100%;
     aspect-ratio: 4 / 5;
-    background: linear-gradient(145deg, var(--color-cream-dark), #d5ccbe);
+    object-fit: cover;
+    object-position: center 20%;
     border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    overflow: hidden;
-  }
-
-  .about-img-placeholder svg {
-    width: 72px;
-    height: 72px;
-    opacity: 0.35;
-  }
-
-  .about-img-placeholder span {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #b0a898;
-    font-weight: 400;
+    filter: brightness(1.05) contrast(1.02);
   }
 
   .about-frame-deco {

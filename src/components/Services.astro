@@ -2,34 +2,34 @@
 const services = [
   {
     number: '01',
-    title: 'One-on-One Coaching',
-    tagline: 'Your personal nutrition roadmap',
+    title: 'Consultas Individuales',
+    tagline: 'Tu camino personalizado hacia la salud',
     description:
-      'Weekly sessions designed around your biology, goals, and lifestyle. Includes initial assessment, lab review, and ongoing adjustments as you progress.',
-    features: ['Initial 90-min deep dive', 'Weekly 50-min sessions', 'Lab & biomarker review', 'Unlimited messaging support'],
-    price: 'From €120 / session',
+      'Sesiones personalizadas diseñadas según tus necesidades, objetivos y estilo de vida. Incluye evaluación nutricional completa, seguimiento continuo y ajustes personalizados.',
+    features: ['Evaluación nutricional completa', 'Plan alimentario personalizado', 'Seguimiento y ajustes', 'Apoyo continuo'],
+    price: 'Consultar',
     featured: true,
     icon: '◎',
   },
   {
     number: '02',
-    title: 'Custom Meal Planning',
-    tagline: 'Eat well without the guesswork',
+    title: 'Planes Personalizados',
+    tagline: 'Nutrición adaptada a ti',
     description:
-      'A fully personalised 4-week meal plan based on your preferences, intolerances, schedule, and nutritional needs — with shopping lists included.',
-    features: ['4-week rotating plan', 'Recipes & prep guides', 'Grocery lists', 'One revision round'],
-    price: 'From €180 / plan',
+      'Planes de alimentación completamente personalizados basados en tus preferencias, intolerancias, objetivos y necesidades nutricionales específicas.',
+    features: ['Análisis de hábitos actuales', 'Plan alimentario detallado', 'Recetas y guías prácticas', 'Revisión y ajustes'],
+    price: 'Consultar',
     featured: false,
     icon: '◈',
   },
   {
     number: '03',
-    title: 'Group Wellness Program',
-    tagline: '6 weeks of guided transformation',
+    title: 'Consultas Online',
+    tagline: 'Asesoramiento desde donde estés',
     description:
-      'Join a small cohort for an immersive group program covering nutrition fundamentals, mindful eating, and sustainable habit formation.',
-    features: ['6 weekly live sessions', 'Private community access', 'Workbooks & resources', 'Q&A every session'],
-    price: 'From €350 / program',
+      'Accede a consultas nutricionales profesionales desde la comodidad de tu hogar. Mismo nivel de atención personalizada con la flexibilidad que necesitas.',
+    features: ['Videoconsultas en vivo', 'Seguimiento remoto', 'Material educativo digital', 'Disponibilidad horaria flexible'],
+    price: 'Consultar',
     featured: false,
     icon: '◇',
   },
@@ -39,13 +39,13 @@ const services = [
 <section class="services" id="services">
   <div class="services-inner">
     <div class="services-header">
-      <div class="section-tag reveal">Services</div>
+      <div class="section-tag reveal">Servicios</div>
       <h2 class="services-heading reveal reveal-delay-1">
-        Ways I can<br /><em>work with you</em>
+        Formas en las que<br /><em>puedo ayudarte</em>
       </h2>
       <p class="services-sub reveal reveal-delay-2">
-        Every offering is built around real, sustainable change —
-        not quick fixes or one-size-fits-all protocols.
+        Cada servicio está diseñado para lograr cambios reales y sostenibles —
+        sin soluciones mágicas ni protocolos genéricos.
       </p>
     </div>
 
@@ -70,7 +70,7 @@ const services = [
           <div class="card-footer">
             <span class="card-price">{s.price}</span>
             <a href="#contact" class={s.featured ? 'btn-primary' : 'btn-outline'}>
-              Get started
+              Comenzar
             </a>
           </div>
         </div>

@@ -9,23 +9,23 @@
   <div class="hero-content">
     <div class="hero-eyebrow reveal">
       <span class="eyebrow-dot"></span>
-      Currently accepting new clients
+      Aceptando nuevos pacientes
     </div>
 
     <h1 class="hero-heading reveal reveal-delay-1">
-      <em>Nourish</em> your body.<br />
-      Transform<br />your life.
+      <em>Nutre</em> tu cuerpo.<br />
+      Transforma<br />tu vida.
     </h1>
 
     <p class="hero-body reveal reveal-delay-2">
-      Evidence-based nutrition coaching tailored to your unique biology,
-      lifestyle, and goals. No fad diets — just lasting, sustainable change.
+      Asesoramiento nutricional personalizado basado en tu biología única,
+      estilo de vida y objetivos. Sin dietas de moda — solo cambios sostenibles y duraderos.
     </p>
 
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+      <a href="#contact" class="btn-primary">Reserva una Consulta Gratuita</a>
       <a href="#about" class="hero-link">
-        Learn about my approach
+        Conoce mi enfoque
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -34,54 +34,54 @@
 
     <div class="hero-stats reveal reveal-delay-4">
       <div class="stat">
-        <span class="stat-n">200+</span>
-        <span class="stat-l">Clients</span>
+        <span class="stat-n">🌿</span>
+        <span class="stat-l">Microbiota</span>
       </div>
       <div class="stat-sep"></div>
       <div class="stat">
-        <span class="stat-n">8</span>
-        <span class="stat-l">Years exp.</span>
+        <span class="stat-n">🔥</span>
+        <span class="stat-l">Inflamación</span>
       </div>
       <div class="stat-sep"></div>
       <div class="stat">
-        <span class="stat-n">95%</span>
-        <span class="stat-l">Satisfaction</span>
+        <span class="stat-n">💚</span>
+        <span class="stat-l">Digestiva</span>
       </div>
     </div>
   </div>
 
   <div class="hero-visual reveal reveal-delay-2">
     <div class="photo-frame">
-      <!-- Replace this div with an <img> tag when you have a real photo -->
-      <div class="photo-placeholder">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="ph-icon">
-          <circle cx="60" cy="42" r="22" stroke="#7A9E68" stroke-width="1.5"/>
-          <path d="M18 108 C18 82 36 70 60 70 C84 70 102 82 102 108" stroke="#7A9E68" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <p class="ph-hint">Add your photo here</p>
-      </div>
+      <img
+        src="/mabel-gomez.jpg"
+        alt="Mabel Gomez - Licenciada en Nutrición"
+        class="hero-photo"
+        width="400"
+        height="500"
+        loading="eager"
+      />
 
       <div class="badge">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
           <path d="M7 1l1.56 3.16L12 4.76l-2.5 2.43.59 3.43L7 9l-3.09 1.62.59-3.43L2 4.76l3.44-.6L7 1z" fill="#BF8C40"/>
         </svg>
-        Registered Nutritionist
+        Lic. en Nutrición
       </div>
     </div>
 
     <div class="float-card">
-      <span class="float-icon">🌿</span>
+      <span class="float-icon">🦠</span>
       <div class="float-text">
-        <span class="float-label">This week</span>
-        <span class="float-val">Anti-inflammatory eating</span>
+        <span class="float-label">Especialidad</span>
+        <span class="float-val">Salud digestiva</span>
       </div>
     </div>
 
     <div class="float-card float-card--bottom">
-      <span class="float-icon">✦</span>
+      <span class="float-icon">💻</span>
       <div class="float-text">
-        <span class="float-label">Available</span>
-        <span class="float-val">Online & in-person</span>
+        <span class="float-label">Disponible</span>
+        <span class="float-val">Online y presencial</span>
       </div>
     </div>
   </div>
@@ -250,31 +250,13 @@
     height: 500px;
   }
 
-  .photo-placeholder {
+  .hero-photo {
     width: 100%;
     height: 100%;
-    background: linear-gradient(145deg, var(--color-cream-dark), #d8d0c4);
+    object-fit: cover;
+    object-position: center 20%;
     border-radius: 200px 200px 140px 140px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .ph-icon {
-    width: 90px;
-    height: 90px;
-    opacity: 0.4;
-  }
-
-  .ph-hint {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #aaa;
-    font-weight: 400;
+    filter: brightness(1.05) contrast(1.02);
   }
 
   .badge {
