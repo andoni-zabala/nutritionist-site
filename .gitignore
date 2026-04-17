@@ -72,3 +72,5 @@ coverage/
 # Claude Code (local development tools)
 .claude/
 .claudeskills/
+
+TODO.txt

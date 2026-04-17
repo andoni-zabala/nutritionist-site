@@ -1,0 +1,193 @@
+---
+---
+
+<section class="problem" id="problem">
+  <div class="problem-inner">
+
+    <div class="problem-header">
+      <div class="section-tag reveal">¿Te suena familiar?</div>
+      <h2 class="problem-heading reveal reveal-delay-1">¿Te pasa que…?</h2>
+    </div>
+
+    <div class="problem-cols">
+
+      <div class="problem-col reveal reveal-delay-2">
+        <ul class="pain-list">
+          <li class="pain-item">
+            <span class="pain-icon" aria-hidden="true">→</span>
+            Probaste dietas y volvés a subir de peso
+          </li>
+          <li class="pain-item">
+            <span class="pain-icon" aria-hidden="true">→</span>
+            No sabés qué comer para sentirte mejor
+          </li>
+          <li class="pain-item">
+            <span class="pain-icon" aria-hidden="true">→</span>
+            Te cuesta mantener hábitos saludables
+          </li>
+          <li class="pain-item">
+            <span class="pain-icon" aria-hidden="true">→</span>
+            Sentís que empezás y abandonás constantemente
+          </li>
+        </ul>
+
+        <p class="problem-transition reveal reveal-delay-3">
+          No estás solo/a. La mayoría de los planes fallan porque no están pensados para vos.
+        </p>
+      </div>
+
+      <div class="problem-divider" aria-hidden="true"></div>
+
+      <div class="problem-col reveal reveal-delay-3">
+        <h3 class="solution-heading">Acá trabajamos distinto.</h3>
+        <ul class="solution-list">
+          <li class="solution-item">
+            <span class="solution-check" aria-hidden="true">✦</span>
+            Mejorar tu alimentación sin restricciones extremas
+          </li>
+          <li class="solution-item">
+            <span class="solution-check" aria-hidden="true">✦</span>
+            Generar hábitos que duren en el tiempo
+          </li>
+          <li class="solution-item">
+            <span class="solution-check" aria-hidden="true">✦</span>
+            Entender qué necesita tu cuerpo
+          </li>
+          <li class="solution-item">
+            <span class="solution-check" aria-hidden="true">✦</span>
+            Lograr resultados sin efecto rebote
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    padding: 7rem 2.5rem;
+    border-top: 1px solid var(--color-cream-dark);
+  }
+
+  .problem-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  .problem-header {
+    margin-bottom: 4rem;
+  }
+
+  .problem-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 3.5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--color-forest);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  .problem-cols {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .problem-divider {
+    background: var(--color-cream-dark);
+    align-self: stretch;
+  }
+
+  .pain-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .pain-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  .pain-icon {
+    color: var(--color-terra);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    font-weight: 500;
+  }
+
+  .problem-transition {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--color-forest);
+    font-style: italic;
+    font-weight: 400;
+    padding: 1.25rem 1.5rem;
+    background: rgba(200, 96, 58, 0.06);
+    border-left: 3px solid var(--color-terra);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .solution-heading {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--color-forest);
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .solution-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .solution-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .solution-check {
+    color: var(--color-sage);
+    font-size: 0.6rem;
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .problem-cols {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .problem-divider {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .problem {
+      padding: 5rem 1.5rem;
+    }
+  }
+</style>

@@ -3,26 +3,26 @@ const testimonials = [
   {
     quote:
       "Trabajar con Mabel cambió completamente mi relación con la comida. Los planes personalizados se adaptaron perfecto a mi estilo de vida. Lo más importante es que aprendí a comer de manera consciente y sin culpa.",
-    name: 'Laura M.',
-    role: 'Diseñadora, 35',
-    avatar: 'LM',
-    result: 'Salud digestiva mejorada',
+    name: "Laura M.",
+    role: "Diseñadora, 35",
+    avatar: "LM",
+    result: "Salud digestiva mejorada",
   },
   {
     quote:
       "Después de años lidiando con problemas digestivos, Mabel me ayudó a entender la importancia de la microbiota. Su enfoque personalizado y basado en evidencia científica hizo toda la diferencia. Me siento mucho mejor.",
-    name: 'Carlos R.',
-    role: 'Ingeniero, 42',
-    avatar: 'CR',
-    result: 'Inflamación reducida',
+    name: "Carlos R.",
+    role: "Ingeniero, 42",
+    avatar: "CR",
+    result: "Inflamación reducida",
   },
   {
     quote:
       "El seguimiento continuo que ofrece Mabel fue fundamental para alcanzar mis objetivos. Su conocimiento sobre nutrición antiinflamatoria es excelente. Muy profesional y atenta a cada detalle.",
-    name: 'Ana S.',
-    role: 'Profesora, 38',
-    avatar: 'AS',
-    result: 'Más energía y bienestar',
+    name: "Mariana F.",
+    role: "Profesora, 27",
+    avatar: "MF",
+    result: "Más energía y bienestar",
   },
 ];
 ---
@@ -37,28 +37,39 @@ const testimonials = [
     </div>
 
     <div class="t-grid">
-      {testimonials.map((t, i) => (
-        <article class={`t-card reveal reveal-delay-${i + 1}`}>
-          <div class="t-stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="t-quote">"{t.quote}"</blockquote>
-          <div class="t-footer">
-            <div class="t-avatar" aria-hidden="true">{t.avatar}</div>
-            <div class="t-meta">
-              <span class="t-name">{t.name}</span>
-              <span class="t-role">{t.role}</span>
+      {
+        testimonials.map((t, i) => (
+          <article class={`t-card reveal reveal-delay-${i + 1}`}>
+            <div class="t-stars" aria-label="5 stars">
+              ★★★★★
             </div>
-            <div class="t-result">
-              <span class="result-icon">✦</span>
-              {t.result}
+            <blockquote class="t-quote">"{t.quote}"</blockquote>
+            <div class="t-footer">
+              <div class="t-avatar" aria-hidden="true">
+                {t.avatar}
+              </div>
+              <div class="t-meta">
+                <span class="t-name">{t.name}</span>
+                <span class="t-role">{t.role}</span>
+              </div>
+              <div class="t-result">
+                <span class="result-icon">✦</span>
+                {t.result}
+              </div>
             </div>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))
+      }
     </div>
 
     <div class="t-cta reveal">
-      <p>¿Lista para escribir tu propia historia?</p>
-      <a href="#contact" class="btn-primary">Reserva una consulta gratuita</a>
+      <p>¿Lista para empezar tu propio cambio?</p>
+      <a
+        href="https://wa.me/5491157553726?text=Hola%20Mabel%2C%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20consultas%20nutricionales.%20%C2%BFPodr%C3%ADas%20indicarme%20c%C3%B3mo%20son%20las%20consultas%20y%20la%20disponibilidad%3F"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer">Agendar consulta por WhatsApp</a
+      >
     </div>
   </div>
 </section>
@@ -100,7 +111,10 @@ const testimonials = [
     flex-direction: column;
     gap: 1.25rem;
     border: 1.5px solid transparent;
-    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      border-color 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .t-card:hover {

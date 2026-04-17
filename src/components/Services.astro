@@ -2,33 +2,33 @@
 const services = [
   {
     number: '01',
-    title: 'Consultas Individuales',
-    tagline: 'Tu camino personalizado hacia la salud',
+    title: 'Primera consulta',
+    tagline: 'El punto de partida',
     description:
-      'Sesiones personalizadas diseñadas según tus necesidades, objetivos y estilo de vida. Incluye evaluación nutricional completa, seguimiento continuo y ajustes personalizados.',
-    features: ['Evaluación nutricional completa', 'Plan alimentario personalizado', 'Seguimiento y ajustes', 'Apoyo continuo'],
+      'Evaluamos tu situación actual, tus objetivos y tu historial alimentario. Salís con un diagnóstico claro y los primeros pasos de tu plan personalizado.',
+    features: ['Evaluación nutricional completa', 'Definición de objetivos reales', 'Primeras pautas alimentarias', 'Plan inicial personalizado'],
     price: 'Consultar',
     featured: true,
     icon: '◎',
   },
   {
     number: '02',
-    title: 'Planes Personalizados',
-    tagline: 'Nutrición adaptada a ti',
+    title: 'Seguimiento',
+    tagline: 'Acompañamiento continuo',
     description:
-      'Planes de alimentación completamente personalizados basados en tus preferencias, intolerancias, objetivos y necesidades nutricionales específicas.',
-    features: ['Análisis de hábitos actuales', 'Plan alimentario detallado', 'Recetas y guías prácticas', 'Revisión y ajustes'],
+      'Revisamos cómo vas, ajustamos el plan según tus avances y resolvemos las dudas que van surgiendo. El seguimiento es clave para sostener los resultados.',
+    features: ['Revisión de avances', 'Ajuste del plan alimentario', 'Resolución de dudas', 'Acompañamiento entre consultas'],
     price: 'Consultar',
     featured: false,
     icon: '◈',
   },
   {
     number: '03',
-    title: 'Consultas Online',
-    tagline: 'Asesoramiento desde donde estés',
+    title: 'Consulta online',
+    tagline: 'Desde donde estés',
     description:
-      'Accede a consultas nutricionales profesionales desde la comodidad de tu hogar. Mismo nivel de atención personalizada con la flexibilidad que necesitas.',
-    features: ['Videoconsultas en vivo', 'Seguimiento remoto', 'Material educativo digital', 'Disponibilidad horaria flexible'],
+      'Mismo nivel de atención personalizada, sin moverte de tu casa. Videoconsulta con seguimiento remoto y material digital incluido.',
+    features: ['Videoconsulta en vivo', 'Material digital incluido', 'Seguimiento por mensaje', 'Horarios flexibles'],
     price: 'Consultar',
     featured: false,
     icon: '◇',
@@ -41,12 +41,20 @@ const services = [
     <div class="services-header">
       <div class="section-tag reveal">Servicios</div>
       <h2 class="services-heading reveal reveal-delay-1">
-        Formas en las que<br /><em>puedo ayudarte</em>
+        ¿En qué puedo<br /><em>ayudarte?</em>
       </h2>
       <p class="services-sub reveal reveal-delay-2">
         Cada servicio está diseñado para lograr cambios reales y sostenibles —
         sin soluciones mágicas ni protocolos genéricos.
       </p>
+      <div class="services-areas reveal reveal-delay-3">
+        <span class="area-tag">Descenso de peso</span>
+        <span class="area-tag">Mejora de hábitos</span>
+        <span class="area-tag">Nutrición antiinflamatoria</span>
+        <span class="area-tag">Salud digestiva</span>
+        <span class="area-tag">Microbiota intestinal</span>
+        <span class="area-tag">Bienestar general</span>
+      </div>
     </div>
 
     <div class="services-grid">
@@ -70,12 +78,17 @@ const services = [
           <div class="card-footer">
             <span class="card-price">{s.price}</span>
             <a href="#contact" class={s.featured ? 'btn-primary' : 'btn-outline'}>
-              Comenzar
+              Reservar turno
             </a>
           </div>
         </div>
       ))}
     </div>
+
+    <p class="services-modality reveal">
+      <span aria-hidden="true">📍</span>
+      Disponible online y presencial — en todo el país.
+    </p>
   </div>
 </section>
 
@@ -257,6 +270,36 @@ const services = [
     font-size: 1.05rem;
     font-weight: 500;
     color: var(--color-forest);
+  }
+
+  .services-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .area-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--color-forest);
+    background: rgba(27, 58, 26, 0.07);
+    border: 1px solid rgba(27, 58, 26, 0.12);
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .services-modality {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    letter-spacing: 0.02em;
   }
 
   @media (max-width: 1024px) {
