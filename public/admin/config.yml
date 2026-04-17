@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: settings
+    label: Configuración del sitio
+    files:
+      - name: profile
+        label: Foto de perfil
+        file: src/data/settings.json
+        fields:
+          - label: Foto de perfil
+            name: profilePhoto
+            widget: image
+            required: true
