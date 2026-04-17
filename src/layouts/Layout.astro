@@ -20,7 +20,7 @@ const {
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,12 +32,11 @@ const {
   <body>
     <slot />
 
-    <script>
-      const identity = (window as any).netlifyIdentity;
-      if (identity) {
-        identity.on("init", (user: any) => {
+    <script is:inline>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
           if (!user) {
-            identity.on("login", () => {
+            window.netlifyIdentity.on("login", function() {
               document.location.href = "/admin/";
             });
           }
