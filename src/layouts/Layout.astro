@@ -4,12 +4,177 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  canonicalURL?: string;
+  ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
 }
 
 const {
   title = "Mabel Gomez — Licenciada en Nutrición",
   description = "Nutrición basada en evidencia adaptada a tu biología, estilo de vida y objetivos. Sin dietas milagro — solo cambios duraderos.",
+  canonicalURL = Astro.url.href,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  noindex = false,
 } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nutricionmabel.com/#website",
+      "url": "https://nutricionmabel.com",
+      "name": "Mabel Gomez Nutrición",
+      "description": "Nutrición basada en evidencia. Sin dietas milagro — solo cambios duraderos.",
+      "inLanguage": "es-AR",
+    },
+    {
+      "@type": ["MedicalBusiness", "LocalBusiness"],
+      "@id": "https://nutricionmabel.com/#business",
+      "name": "Mabel Gomez — Licenciada en Nutrición",
+      "url": "https://nutricionmabel.com",
+      "telephone": "+5491157553726",
+      "email": "contacto@nutricionmabel.com",
+      "image": "https://nutricionmabel.com/uploads/mabel-2.png",
+      "priceRange": "$$",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AR",
+        "addressLocality": "Buenos Aires",
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Argentina" },
+        { "@type": "AdministrativeArea", "name": "Buenos Aires" },
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00",
+        },
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Nutrición",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Primera Consulta Nutricional",
+              "description":
+                "Evaluación integral de historial de salud, hábitos alimentarios y elaboración de plan nutricional personalizado basado en evidencia.",
+            },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Seguimiento Nutricional",
+              "description":
+                "Consultas periódicas para revisar progreso y ajustar el plan nutricional cada 3–4 semanas.",
+            },
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consulta Online",
+              "description":
+                "Consultas nutricionales por videollamada con la misma calidad que las presenciales.",
+            },
+          },
+        ],
+      },
+      "sameAs": [],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nutricionmabel.com/#person",
+      "name": "Mabel Gomez",
+      "jobTitle": "Licenciada en Nutrición",
+      "description":
+        "Nutricionista especializada en nutrición basada en evidencia, microbiota intestinal e inflamación crónica. Atiende en Buenos Aires y online.",
+      "url": "https://nutricionmabel.com",
+      "image": "https://nutricionmabel.com/uploads/mabel-2.png",
+      "email": "contacto@nutricionmabel.com",
+      "telephone": "+5491157553726",
+      "worksFor": { "@id": "https://nutricionmabel.com/#business" },
+      "knowsAbout": [
+        "Nutrición basada en evidencia",
+        "Microbiota intestinal",
+        "Inflamación crónica",
+        "Pérdida de peso sostenible",
+        "Energía y bienestar",
+        "Dietoterapia",
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Licenciada en Nutrición",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nutricionmabel.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye la primera consulta con Mabel Gomez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La primera consulta incluye una evaluación integral del historial de salud, hábitos alimentarios, análisis de laboratorio y objetivos personales. Se elabora un plan nutricional personalizado basado en evidencia científica.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen consultas de nutrición online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Mabel Gomez ofrece consultas de nutrición completamente online por videollamada, con la misma calidad que las consultas presenciales en Buenos Aires, Argentina.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda en verse resultados con una nutricionista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los cambios en energía y digestión suelen notarse en 2–4 semanas. Los cambios en composición corporal sostenibles toman entre 2 y 6 meses dependiendo del objetivo y punto de partida de cada persona.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se especializa la nutricionista Mabel Gomez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mabel Gomez es Licenciada en Nutrición especializada en nutrición basada en evidencia, salud de la microbiota intestinal, manejo de inflamación crónica, pérdida de peso sostenible y optimización de energía.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el seguimiento nutricional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El seguimiento incluye consultas periódicas para revisar el progreso, ajustar el plan nutricional según tu evolución y resolver dudas. La frecuencia se adapta a cada persona, típicamente cada 3–4 semanas.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "¿La nutricionista hace dietas restrictivas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El enfoque de Mabel Gomez rechaza las dietas milagro y los regímenes extremadamente restrictivos. Los planes son individualizados, basados en evidencia científica y orientados a cambios sostenibles a largo plazo.",
+          },
+        },
+      ],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -18,8 +183,36 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="author" content="Mabel Gomez" />
+    <meta name="theme-color" content="#1B3A1A" />
+    {noindex
+      ? <meta name="robots" content="noindex,nofollow" />
+      : <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+    }
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Mabel Gomez Nutrición" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Structured data -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

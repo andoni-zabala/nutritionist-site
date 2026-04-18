@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# AI search and LLM crawlers — explicitly allowed for GEO/LLMO citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://licmabelgomez.netlify.app/sitemap-index.xml
