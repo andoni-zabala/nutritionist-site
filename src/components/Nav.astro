@@ -1,11 +1,15 @@
 ---
+
 ---
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <span class="logo-name">Mabel Gomez</span>
-      <span class="logo-sub">Lic. en Nutrición</span>
+      <img src="/uploads/logo.webp" alt="Nutry Maby Nutrición" class="logo-img" />
+      <span class="logo-text">
+        <span class="logo-name">Mabel Gomez</span>
+        <span class="logo-sub">Lic. en Nutrición</span>
+      </span>
     </a>
 
     <ul class="nav-links">
@@ -17,7 +21,12 @@
       <li><a href="#contact" class="nav-cta">Agendar consulta</a></li>
     </ul>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
       <span></span>
       <span></span>
     </button>
@@ -31,7 +40,11 @@
       <li><a href="#services" class="mobile-link">Servicios</a></li>
       <li><a href="#approach" class="mobile-link">Enfoque</a></li>
       <li><a href="#testimonials" class="mobile-link">Testimonios</a></li>
-      <li><a href="#contact" class="mobile-link mobile-link--cta">Agendar consulta</a></li>
+      <li>
+        <a href="#contact" class="mobile-link mobile-link--cta"
+          >Agendar consulta</a
+        >
+      </li>
     </ul>
   </div>
 </nav>
@@ -43,7 +56,9 @@
     left: 0;
     right: 0;
     z-index: 100;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      background 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .nav.scrolled {
@@ -70,7 +85,27 @@
 
   .nav-logo {
     text-decoration: none;
-    color: var(--color-forest);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-logo:hover .logo-img {
+    transform: scale(1.06);
+  }
+
+  .logo-text {
     display: flex;
     flex-direction: column;
     line-height: 1.15;
@@ -81,6 +116,7 @@
     font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: 0.01em;
+    color: var(--color-forest);
   }
 
   .logo-sub {
@@ -121,14 +157,15 @@
     border-radius: 100px;
     opacity: 1 !important;
     font-weight: 500 !important;
-    transition: background 0.2s ease, transform 0.2s ease !important;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease !important;
   }
 
   .nav-cta:hover {
     background: var(--color-forest-mid) !important;
     transform: translateY(-1px);
   }
-
 
   /* Hamburger */
   .nav-toggle {
@@ -218,26 +255,26 @@
 </style>
 
 <script>
-  const nav = document.getElementById('nav')!;
-  const toggle = document.getElementById('nav-toggle')!;
-  const mobileMenu = document.getElementById('mobile-menu')!;
+  const nav = document.getElementById("nav")!;
+  const toggle = document.getElementById("nav-toggle")!;
+  const mobileMenu = document.getElementById("mobile-menu")!;
 
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 40);
   });
 
-  toggle.addEventListener('click', () => {
-    const isOpen = toggle.classList.toggle('open');
-    mobileMenu.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', String(isOpen));
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.classList.toggle("open");
+    mobileMenu.classList.toggle("open", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   // Close on link click
-  mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle.classList.remove("open");
+      mobileMenu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
     });
   });
 </script>

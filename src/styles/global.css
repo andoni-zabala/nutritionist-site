@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -132,4 +133,30 @@ h1, h2, h3, h4 {
   background: var(--color-forest);
   color: var(--color-cream);
   transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 90px;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .reveal-delay-4,
+  .reveal-delay-5 {
+    transition-delay: 0s;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover {
+    transform: none;
+  }
 }

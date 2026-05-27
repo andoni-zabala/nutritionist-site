@@ -12,7 +12,7 @@ const testimonials = [
     quote:
       "Después de años lidiando con problemas digestivos, Mabel me ayudó a entender la importancia de la microbiota. Su enfoque personalizado y basado en evidencia científica hizo toda la diferencia. Me siento mucho mejor.",
     name: "Carlos R.",
-    role: "Ingeniero, 42",
+    role: "Ingeniero industrial, 42",
     avatar: "CR",
     result: "Inflamación reducida",
   },
@@ -20,7 +20,7 @@ const testimonials = [
     quote:
       "El seguimiento continuo que ofrece Mabel fue fundamental para alcanzar mis objetivos. Su conocimiento sobre nutrición antiinflamatoria es excelente. Muy profesional y atenta a cada detalle.",
     name: "Mariana F.",
-    role: "Profesora, 27",
+    role: "Arquitecta, 28",
     avatar: "MF",
     result: "Más energía y bienestar",
   },
@@ -34,6 +34,66 @@ const testimonials = [
       <h2 class="t-heading reveal reveal-delay-1">
         Lo que dicen mis pacientes
       </h2>
+    </div>
+
+    <!-- Results dashboard strip -->
+    <div class="results-strip reveal reveal-delay-2">
+      <div class="result-stat">
+        <div class="result-icon-wrap" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M3 14L7 9L10 12L14 6L17 9"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <circle cx="17" cy="9" r="1.5" fill="currentColor" opacity="0.6"
+            ></circle>
+          </svg>
+        </div>
+        <span class="result-num">+100</span>
+        <span class="result-label">pacientes acompañados</span>
+      </div>
+      <div class="result-sep" aria-hidden="true"></div>
+      <div class="result-stat">
+        <div class="result-icon-wrap" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle
+              cx="10"
+              cy="10"
+              r="7"
+              stroke="currentColor"
+              stroke-width="1.5"></circle>
+            <path
+              d="M7 10L9.5 12.5L13 8"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <span class="result-num">87%</span>
+        <span class="result-label">logran sus objetivos</span>
+      </div>
+      <div class="result-sep" aria-hidden="true"></div>
+      <div class="result-stat">
+        <div class="result-icon-wrap" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M10 4C10 4 5 7 5 11.5C5 14.5 7.2 17 10 17C12.8 17 15 14.5 15 11.5C15 7 10 4 10 4Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"></path>
+            <path
+              d="M10 17V19"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <span class="result-num">8+ años</span>
+        <span class="result-label">de experiencia clínica</span>
+      </div>
     </div>
 
     <div class="t-grid">
@@ -61,16 +121,6 @@ const testimonials = [
         ))
       }
     </div>
-
-    <div class="t-cta reveal">
-      <p>¿Lista para empezar tu propio cambio?</p>
-      <a
-        href="https://wa.me/message/BTY5IEGJWF67F1"
-        class="btn-primary"
-        target="_blank"
-        rel="noopener noreferrer">Agendar consulta por WhatsApp</a
-      >
-    </div>
   </div>
 </section>
 
@@ -93,6 +143,58 @@ const testimonials = [
     font-size: clamp(2.4rem, 3.5vw, 3.6rem);
     color: var(--color-forest);
     line-height: 1.1;
+  }
+
+  /* Results strip */
+  .results-strip {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--color-forest);
+    border-radius: 16px;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+  }
+
+  .result-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .result-icon-wrap {
+    color: var(--color-gold);
+    opacity: 0.8;
+    margin-bottom: 0.15rem;
+  }
+
+  .result-num {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--color-cream);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .result-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(250, 247, 240, 0.55);
+    font-weight: 400;
+  }
+
+  .result-sep {
+    width: 1px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
   }
 
   /* Grid */
@@ -228,11 +330,30 @@ const testimonials = [
       grid-template-columns: 1fr;
       max-width: 520px;
     }
+
+    .results-strip {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .result-stat {
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .result-sep {
+      display: none;
+    }
   }
 
   @media (max-width: 480px) {
     .testimonials {
       padding: 5rem 1.5rem;
+    }
+
+    .results-strip {
+      padding: 1.25rem 1rem;
     }
   }
 </style>

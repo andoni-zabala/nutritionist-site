@@ -19,9 +19,9 @@ import settings from "../data/settings.json";
     </h1>
 
     <p class="hero-body reveal reveal-delay-2">
-      Soy Lic. Mabel Gómez, nutricionista. Te ayudo a mejorar tu salud y lograr
-      resultados sostenibles con un plan personalizado sin restricciones
-      extremas ni efecto rebote.
+      Soy Lic. Mabel Gómez, nutricionista funcional integrativa. Te ayudo a
+      mejorar tu salud y lograr resultados sostenibles con un plan personalizado
+      sin restricciones extremas ni efecto rebote.
     </p>
 
     <div class="hero-actions reveal reveal-delay-3">
@@ -92,35 +92,28 @@ import settings from "../data/settings.json";
         loading="eager"
       />
 
-      <div class="badge">
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 14 14"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M7 1l1.56 3.16L12 4.76l-2.5 2.43.59 3.43L7 9l-3.09 1.62.59-3.43L2 4.76l3.44-.6L7 1z"
-            fill="#BF8C40"></path>
-        </svg>
-        Lic. en Nutrición
+      <div class="float-card float-card--photo-left">
+        <span class="float-icon">🥑</span>
+        <div class="float-text">
+          <span class="float-label">Enfoque</span>
+          <span class="float-val">Nutrición antinflamatoria</span>
+        </div>
       </div>
     </div>
 
     <div class="float-card">
-      <span class="float-icon">✓</span>
-      <div class="float-text">
-        <span class="float-label">Resultado</span>
-        <span class="float-val">Hábitos reales y sostenibles</span>
-      </div>
-    </div>
-
-    <div class="float-card float-card--bottom">
       <span class="float-icon">💻</span>
       <div class="float-text">
         <span class="float-label">Disponible</span>
         <span class="float-val">Online y presencial</span>
+      </div>
+    </div>
+
+    <div class="float-card float-card--bottom">
+      <span class="float-icon">✓</span>
+      <div class="float-text">
+        <span class="float-label">Resultado</span>
+        <span class="float-val">Hábitos reales y sostenibles</span>
       </div>
     </div>
   </div>
@@ -317,27 +310,9 @@ import settings from "../data/settings.json";
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 75%;
+    object-position: 10% 95%;
     border-radius: 200px 200px 140px 140px;
     filter: brightness(1.05) contrast(1.02);
-  }
-
-  .badge {
-    position: absolute;
-    bottom: 28px;
-    left: -24px;
-    background: var(--color-forest);
-    color: var(--color-cream);
-    padding: 0.55rem 1.2rem;
-    border-radius: 100px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    box-shadow: 0 4px 20px rgba(27, 58, 26, 0.3);
   }
 
   /* Floating cards */
@@ -359,6 +334,13 @@ import settings from "../data/settings.json";
     top: auto;
     bottom: 80px;
     right: -40px;
+  }
+
+  .float-card--photo-left {
+    top: auto;
+    right: auto;
+    bottom: 28px;
+    left: -32px;
   }
 
   .float-icon {
