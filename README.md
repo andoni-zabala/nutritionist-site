@@ -1,6 +1,6 @@
 # Nutritionist Website
 
-A modern, elegant single-page website for nutritionist Sofía Martínez, built with Astro 5.6.0 and featuring smooth scroll animations, responsive design, and an integrated contact form.
+A modern, elegant single-page website for nutritionist Mabel Gomez, built with Astro 5.6.0 and featuring smooth scroll animations, responsive design, and an integrated contact form.
 
 ![Astro](https://img.shields.io/badge/Astro-5.6.0-FF5D01?style=flat&logo=astro)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=flat&logo=tailwind-css)

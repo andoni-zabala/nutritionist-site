@@ -1,37 +1,52 @@
 ---
 const services = [
   {
-    number: '01',
-    title: 'Primera consulta',
-    tagline: 'El punto de partida',
+    number: "01",
+    title: "Primera consulta",
+    tagline: "Duración aproximada: 60 minutos",
     description:
-      'Evaluamos tu situación actual, tus objetivos y tu historial alimentario. Salís con un diagnóstico claro y los primeros pasos de tu plan personalizado.',
-    features: ['Evaluación nutricional completa', 'Definición de objetivos reales', 'Primeras pautas alimentarias', 'Plan inicial personalizado'],
-    price: 'Consultar',
+      "Evaluamos tu situación actual, tus objetivos y tu historial alimentario. Salís con un diagnóstico claro y los primeros pasos de tu plan personalizado.",
+    features: [
+      "Evaluación nutricional completa y laboratorio",
+      "Definición de objetivos reales",
+      "Plan inicial personalizado",
+      "Suplementación funcional",
+    ],
+    price: "Consultar",
     featured: true,
-    icon: '◎',
+    icon: "◎",
   },
   {
-    number: '02',
-    title: 'Seguimiento',
-    tagline: 'Acompañamiento continuo',
+    number: "02",
+    title: "Seguimiento/Control",
+    tagline: "Duración aproximada: 40 minutos",
     description:
-      'Revisamos cómo vas, ajustamos el plan según tus avances y resolvemos las dudas que van surgiendo. El seguimiento es clave para sostener los resultados.',
-    features: ['Revisión de avances', 'Ajuste del plan alimentario', 'Resolución de dudas', 'Acompañamiento entre consultas'],
-    price: 'Consultar',
+      "Revisamos cómo vas, ajustamos el plan según tus avances y resolvemos las dudas que van surgiendo. El seguimiento es clave para sostener los resultados.",
+    features: [
+      "Revisión de avances",
+      "Ajuste del plan alimentario",
+      "Resolución de dudas",
+      "Acompañamiento entre consultas",
+    ],
+    price: "Consultar",
     featured: false,
-    icon: '◈',
+    icon: "◈",
   },
   {
-    number: '03',
-    title: 'Consulta online',
-    tagline: 'Desde donde estés',
+    number: "03",
+    title: "Consulta online",
+    tagline: "Desde donde estés",
     description:
-      'Mismo nivel de atención personalizada, sin moverte de tu casa. Videoconsulta con seguimiento remoto y material digital incluido.',
-    features: ['Videoconsulta en vivo', 'Material digital incluido', 'Seguimiento por mensaje', 'Horarios flexibles'],
-    price: 'Consultar',
+      "Mismo nivel de atención personalizada, sin moverte de tu casa. Videoconsulta con seguimiento remoto y material digital incluido.",
+    features: [
+      "Videoconsulta en vivo",
+      "Material digital incluido",
+      "Seguimiento por mensaje",
+      "Horarios flexibles",
+    ],
+    price: "Consultar",
     featured: false,
-    icon: '◇',
+    icon: "◇",
   },
 ];
 ---
@@ -58,31 +73,40 @@ const services = [
     </div>
 
     <div class="services-grid">
-      {services.map((s, i) => (
-        <div class={`service-card ${s.featured ? 'service-card--featured' : ''} reveal reveal-delay-${i + 2}`}>
-          <div class="card-top">
-            <div class="card-number">{s.number}</div>
-            <div class="card-icon">{s.icon}</div>
+      {
+        services.map((s, i) => (
+          <div
+            class={`service-card ${s.featured ? "service-card--featured" : ""} reveal reveal-delay-${i + 2}`}
+          >
+            <div class="card-top">
+              <div class="card-number">{s.number}</div>
+              <div class="card-icon">{s.icon}</div>
+            </div>
+            <h3 class="card-title">{s.title}</h3>
+            <p class="card-tagline">{s.tagline}</p>
+            <p class="card-desc">{s.description}</p>
+            <ul class="card-features">
+              {s.features.map((f) => (
+                <li>
+                  <span class="feat-check" aria-hidden="true">
+                    ✓
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <div class="card-footer">
+              <span class="card-price">{s.price}</span>
+              <a
+                href="#contact"
+                class={s.featured ? "btn-primary" : "btn-outline"}
+              >
+                Reservar turno
+              </a>
+            </div>
           </div>
-          <h3 class="card-title">{s.title}</h3>
-          <p class="card-tagline">{s.tagline}</p>
-          <p class="card-desc">{s.description}</p>
-          <ul class="card-features">
-            {s.features.map((f) => (
-              <li>
-                <span class="feat-check" aria-hidden="true">✓</span>
-                {f}
-              </li>
-            ))}
-          </ul>
-          <div class="card-footer">
-            <span class="card-price">{s.price}</span>
-            <a href="#contact" class={s.featured ? 'btn-primary' : 'btn-outline'}>
-              Reservar turno
-            </a>
-          </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
 
     <p class="services-modality reveal">
@@ -143,7 +167,9 @@ const services = [
     display: flex;
     flex-direction: column;
     gap: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .service-card:hover {
@@ -258,11 +284,11 @@ const services = [
     gap: 1rem;
     flex-wrap: wrap;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(0,0,0,0.07);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
   }
 
   .service-card--featured .card-footer {
-    border-top-color: rgba(255,255,255,0.12);
+    border-top-color: rgba(255, 255, 255, 0.12);
   }
 
   .card-price {

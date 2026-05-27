@@ -2,172 +2,91 @@
 ---
 
 <section class="about" id="about">
+  <div class="about-overlay" aria-hidden="true"></div>
+
   <div class="about-inner">
-    <div class="about-image-col reveal">
-      <div class="about-frame">
-        <img
-          src="/mabel-gomez.jpg"
-          alt="Mabel Gomez - Licenciada en Nutrición"
-          class="about-photo"
-          width="600"
-          height="750"
-          loading="lazy"
-        />
-        <div class="about-frame-deco" aria-hidden="true"></div>
-      </div>
+    <div class="section-tag section-tag--light reveal">Sobre mí</div>
 
-      <div class="about-credentials reveal reveal-delay-2">
-        <div class="cred-item">
-          <span class="cred-icon">🎓</span>
-          <div>
-            <div class="cred-title">Licenciada en Nutrición</div>
-            <div class="cred-sub">Nutricionista profesional</div>
-          </div>
-        </div>
-        <div class="cred-item">
-          <span class="cred-icon">🦠</span>
-          <div>
-            <div class="cred-title">Especialista en Microbiota</div>
-            <div class="cred-sub">Salud intestinal</div>
-          </div>
-        </div>
-        <div class="cred-item">
-          <span class="cred-icon">🔥</span>
-          <div>
-            <div class="cred-title">Nutrición Antiinflamatoria</div>
-            <div class="cred-sub">Salud digestiva</div>
-          </div>
-        </div>
+    <h2 class="about-heading reveal reveal-delay-1">
+      La nutricionista que entiende<br />
+      que <em>cada cuerpo es diferente.</em>
+    </h2>
+
+    <div class="about-body reveal reveal-delay-2">
+      <p class="about-p">
+        Soy Licenciada en Nutrición con formación en Nutrición Funcional e Integrativa. Mi perfil profesional se enfoca en microbiota intestinal, salud digestiva, nutrición antiinflamatoria basada en el modelo de alimentación mediterránea y estrategias orientadas a la longevidad y el envejecimiento saludable, acompañando a personas que buscan mejorar su salud y bienestar desde un enfoque integral y basado en evidencia científica.
+      </p>
+
+      <p class="about-p">
+        Además, soy docente universitaria y coordino grupos de descenso de peso y reeducación alimentaria, acompañando procesos de cambio de manera humana, realista y sostenible. En consulta también realizo evaluación y medición de composición corporal como parte del seguimiento nutricional.
+      </p>
+
+      <p class="about-p">
+        Actualmente realizo atención nutricional presencial y online desde una mirada funcional e integrativa.
+      </p>
+    </div>
+
+    <div class="about-values reveal reveal-delay-3">
+      <div class="value">
+        <span class="value-icon">✦</span>
+        <span>Plan hecho para vos</span>
+      </div>
+      <div class="value">
+        <span class="value-icon">✦</span>
+        <span>Bienestar real</span>
+      </div>
+      <div class="value">
+        <span class="value-icon">✦</span>
+        <span>Sin restricciones extremas</span>
+      </div>
+      <div class="value">
+        <span class="value-icon">✦</span>
+        <span>Resultados duraderos</span>
       </div>
     </div>
 
-    <div class="about-text-col">
-      <div class="section-tag reveal">Sobre mí</div>
-
-      <h2 class="about-heading reveal reveal-delay-1">
-        La nutricionista que entiende<br />
-        que <em>cada cuerpo es diferente.</em>
-      </h2>
-
-      <p class="about-p reveal reveal-delay-2">
-        Después de años trabajando con pacientes, aprendí que no existe una dieta única que funcione para todos. Por eso mi trabajo empieza por entenderte: tus hábitos, tu historia, tu estilo de vida y tus objetivos reales.
-      </p>
-
-      <p class="about-p reveal reveal-delay-3">
-        Mi formación en microbiota, nutrición antiinflamatoria y salud digestiva me permite diseñar <strong>planes que funcionan para vos</strong> — no planes genéricos que abandonás a los 15 días.
-      </p>
-
-      <div class="about-values reveal reveal-delay-4">
-        <div class="value">
-          <span class="value-icon">✦</span>
-          <span>Plan hecho para vos</span>
-        </div>
-        <div class="value">
-          <span class="value-icon">✦</span>
-          <span>Bienestar real</span>
-        </div>
-        <div class="value">
-          <span class="value-icon">✦</span>
-          <span>Sin restricciones extremas</span>
-        </div>
-        <div class="value">
-          <span class="value-icon">✦</span>
-          <span>Resultados duraderos</span>
-        </div>
-      </div>
-
-      <a href="#contact" class="btn-primary reveal reveal-delay-5" style="margin-top: 2.5rem;">
-        Quiero saber más
-      </a>
-    </div>
+    <a href="#contact" class="btn-primary btn-primary--light reveal reveal-delay-4">
+      Quiero saber más
+    </a>
   </div>
 </section>
 
 <style>
   .about {
-    padding: 8rem 2.5rem;
-    max-width: 1360px;
-    margin: 0 auto;
+    position: relative;
+    background-image: url('/uploads/food.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 9rem 2.5rem;
+    text-align: center;
+  }
+
+  .about-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(27, 58, 26, 0.72) 0%,
+      rgba(20, 40, 18, 0.80) 100%
+    );
   }
 
   .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7rem;
-    align-items: start;
-  }
-
-  /* Image column */
-  .about-image-col {
-    position: sticky;
-    top: 7rem;
-  }
-
-  .about-frame {
     position: relative;
-    margin-bottom: 2.5rem;
-  }
-
-  .about-photo {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: 16px;
-    filter: brightness(1.05) contrast(1.02);
-  }
-
-  .about-frame-deco {
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    right: 16px;
-    bottom: 16px;
-    border: 1.5px solid var(--color-cream-dark);
-    border-radius: 18px;
-    z-index: -1;
-  }
-
-  /* Credentials */
-  .about-credentials {
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  }
-
-  .cred-item {
-    display: flex;
     align-items: center;
-    gap: 0.875rem;
   }
 
-  .cred-icon {
-    font-size: 1.25rem;
-    flex-shrink: 0;
-  }
-
-  .cred-title {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--color-forest);
-  }
-
-  .cred-sub {
-    font-size: 0.72rem;
-    color: #999;
-    margin-top: 0.1rem;
-  }
-
-  /* Text column */
   .about-heading {
     font-size: clamp(2.4rem, 3.5vw, 3.6rem);
     line-height: 1.1;
-    color: var(--color-forest);
-    margin-bottom: 2rem;
+    color: var(--color-cream);
+    margin-bottom: 2.5rem;
   }
 
   .about-heading em {
@@ -175,25 +94,28 @@
     color: var(--color-terra);
   }
 
+  .about-body {
+    max-width: 720px;
+  }
+
   .about-p {
     font-size: 1.02rem;
-    line-height: 1.8;
-    color: #555;
+    line-height: 1.85;
+    color: rgba(250, 247, 240, 0.82);
     margin-bottom: 1.25rem;
     font-weight: 300;
   }
 
-  .about-p strong {
-    color: var(--color-forest);
-    font-weight: 500;
-  }
-
-  /* Values */
   .about-values {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(250, 247, 240, 0.18);
+    width: 100%;
   }
 
   .value {
@@ -201,35 +123,41 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.82rem;
-    color: var(--color-ink);
+    color: var(--color-cream);
     font-weight: 400;
+    letter-spacing: 0.04em;
   }
 
   .value-icon {
     color: var(--color-gold);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     flex-shrink: 0;
   }
 
-  /* Responsive */
+  .btn-primary--light {
+    background: var(--color-cream);
+    color: var(--color-forest);
+  }
+
+  .btn-primary--light:hover {
+    background: var(--color-cream-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  }
+
   @media (max-width: 1024px) {
-    .about-inner {
-      grid-template-columns: 1fr;
-      gap: 3.5rem;
-    }
-
-    .about-image-col {
-      position: static;
-    }
-
-    .about-img-placeholder {
-      aspect-ratio: 16 / 9;
+    .about {
+      background-attachment: scroll;
     }
   }
 
   @media (max-width: 480px) {
     .about {
-      padding: 5rem 1.5rem;
+      padding: 6rem 1.5rem;
+    }
+
+    .about-values {
+      gap: 0.75rem 1.5rem;
     }
   }
 </style>
