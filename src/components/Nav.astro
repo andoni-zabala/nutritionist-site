@@ -202,8 +202,6 @@
   .mobile-menu {
     display: none;
     background: var(--color-cream);
-    border-top: 1px solid var(--color-cream-dark);
-    padding: 1.5rem 2.5rem 2rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -211,6 +209,8 @@
 
   .mobile-menu.open {
     max-height: 400px;
+    border-top: 1px solid var(--color-cream-dark);
+    padding: 1.5rem 2.5rem 2rem;
   }
 
   .mobile-menu ul {
@@ -240,12 +240,23 @@
   }
 
   @media (max-width: 768px) {
+    .nav {
+      background: rgba(250, 247, 240, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
+    }
+
     .nav-links {
       display: none;
     }
 
     .nav-toggle {
       display: flex;
+    }
+
+    .nav-toggle span {
+      height: 2px;
     }
 
     .mobile-menu {
