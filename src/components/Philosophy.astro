@@ -1,20 +1,20 @@
 ---
 const principles = [
   {
-    title: 'Salud Digestiva',
-    body: 'La salud intestinal es la base del bienestar general. Trabajo en identificar y abordar problemas digestivos para mejorar tu calidad de vida.',
+    title: "Salud Digestiva",
+    body: "La salud intestinal es la base del bienestar general. Trabajo en identificar y abordar problemas digestivos para mejorar tu calidad de vida.",
   },
   {
-    title: 'Microbiota Intestinal',
-    body: 'Tu microbiota es única. Diseño planes nutricionales que favorecen el equilibrio de tu flora intestinal y fortalecen tu sistema inmunológico.',
+    title: "Microbiota Intestinal",
+    body: "Tu microbiota es única. Diseño planes nutricionales que favorecen el equilibrio de tu flora intestinal y fortalecen tu sistema inmunológico.",
   },
   {
-    title: 'Nutrición Antiinflamatoria',
-    body: 'La inflamación crónica está en la raíz de muchas enfermedades. Te ayudo a elegir alimentos que reduzcan la inflamación y promuevan la sanación.',
+    title: "Nutrición Antiinflamatoria",
+    body: "La inflamación crónica está en la raíz de muchas enfermedades. Te ayudo a elegir alimentos que reduzcan la inflamación y promuevan la sanación.",
   },
   {
-    title: 'Enfoque Personalizado',
-    body: 'No existen dietas universales. Cada plan es diseñado específicamente para ti, considerando tus necesidades, objetivos y estilo de vida.',
+    title: "Enfoque Personalizado",
+    body: "No existen dietas universales. Cada plan es diseñado específicamente para ti, considerando tus necesidades, objetivos y estilo de vida.",
   },
 ];
 ---
@@ -25,11 +25,16 @@ const principles = [
       <div class="section-tag section-tag--light">Mi enfoque</div>
 
       <blockquote class="big-quote reveal reveal-delay-1">
-        "La salud no es un destino. Es la práctica continua de escuchar a tu cuerpo y tomar decisiones que <em>lo honren.</em>"
+        "La salud no es un destino. Es la práctica continua de escuchar a tu
+        cuerpo y tomar decisiones que <em>lo honren.</em>"
       </blockquote>
 
       <p class="philosophy-body reveal reveal-delay-2">
-        Mi práctica se basa en la nutrición personalizada — un enfoque integral que trata el cuerpo como un todo interconectado. Me especializo en salud digestiva, microbiota intestinal y nutrición antiinflamatoria, combinando las últimas investigaciones científicas para crear programas efectivos y sostenibles.
+        Mi práctica se basa en la nutrición personalizada — un enfoque integral
+        que trata el cuerpo como un todo interconectado. Me especializo en salud
+        digestiva, microbiota intestinal y nutrición antiinflamatoria,
+        combinando las últimas investigaciones científicas para crear programas
+        efectivos y sostenibles.
       </p>
 
       <a
@@ -43,15 +48,17 @@ const principles = [
     </div>
 
     <div class="principles-col">
-      {principles.map((p, i) => (
-        <div class={`principle reveal reveal-delay-${i + 1}`}>
-          <div class="principle-num">0{i + 1}</div>
-          <div class="principle-content">
-            <h3 class="principle-title">{p.title}</h3>
-            <p class="principle-body">{p.body}</p>
+      {
+        principles.map((p, i) => (
+          <div class={`principle reveal reveal-delay-${i + 1}`}>
+            <div class="principle-num">▸</div>
+            <div class="principle-content">
+              <h3 class="principle-title">{p.title}</h3>
+              <p class="principle-body">{p.body}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
@@ -67,7 +74,7 @@ const principles = [
   /* Decorative blobs */
   .philosophy::before,
   .philosophy::after {
-    content: '';
+    content: "";
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
@@ -76,7 +83,11 @@ const principles = [
   .philosophy::before {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(122, 158, 104, 0.15) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(122, 158, 104, 0.15) 0%,
+      transparent 70%
+    );
     top: -200px;
     right: -150px;
   }
@@ -84,7 +95,11 @@ const principles = [
   .philosophy::after {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(200, 96, 58, 0.1) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(200, 96, 58, 0.1) 0%,
+      transparent 70%
+    );
     bottom: -100px;
     left: 10%;
   }

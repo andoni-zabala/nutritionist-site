@@ -13,7 +13,7 @@ const services = [
       "Suplementación funcional",
     ],
     price: "Consultar",
-    featured: true,
+    featured: false,
     icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="7" y="3" width="14" height="22" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
       <path d="M11 3.5V5.5C11 6.33 11.67 7 12.5 7H15.5C16.33 7 17 6.33 17 5.5V3.5" stroke="currentColor" stroke-width="1.5"/>
@@ -185,12 +185,68 @@ const services = [
     gap: 0;
     transition:
       transform 0.3s ease,
-      box-shadow 0.3s ease;
+      box-shadow 0.3s ease,
+      background 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
   }
 
   .service-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  }
+
+  .service-card:not(.service-card--featured):hover {
+    background: var(--color-forest);
+    border-color: var(--color-forest);
+    color: var(--color-cream);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .service-card:not(.service-card--featured):hover .card-number,
+  .service-card:not(.service-card--featured):hover .card-title,
+  .service-card:not(.service-card--featured):hover .card-tagline,
+  .service-card:not(.service-card--featured):hover .card-desc {
+    color: var(--color-cream);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-tagline {
+    color: var(--color-sage-light);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-number {
+    color: var(--color-sage-light);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-price {
+    color: var(--color-sage-light);
+  }
+
+  .service-card:not(.service-card--featured):hover .feat-check {
+    color: var(--color-sage-light);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-features li {
+    color: rgba(250, 247, 240, 0.8);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-footer {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .service-card:not(.service-card--featured):hover .card-icon {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-gold);
+  }
+
+  .service-card:not(.service-card--featured):hover .btn-outline {
+    color: var(--color-cream);
+    border-color: var(--color-cream);
   }
 
   .service-card--featured {
